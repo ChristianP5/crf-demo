@@ -1,0 +1,3 @@
+Make sure to:
+- Use a Service Account with the necessary permissions to start the VM.
+- Add the Label "crf-vm-start" with the value "true" to the VM you want to start.

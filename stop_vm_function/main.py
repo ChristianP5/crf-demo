@@ -7,6 +7,10 @@ from datetime import datetime
 @functions_framework.http
 def stop_vm_function(request):
 
+    # Constants
+    PROJECT_ID = "bsi-mlpt-training"
+    BUCKET_ID = "clab59bucket"
+
     # Get a List VM Instances
     instances_list = list_instances()
 
@@ -30,7 +34,7 @@ def list_instances():
 
     # Initialize request argument(s)
     request = compute_v1.AggregatedListInstancesRequest(
-        project="c-gcp-project",
+        project=PROJECT_ID,
         filter='(labels.crf-vm-stop = true) AND (status = RUNNING)'
     )
 
@@ -52,7 +56,7 @@ def upload_blob(upload_string, destination_blob_name):
     """Uploads a file to the bucket."""
     
     storage_client = storage.Client()
-    bucket = storage_client.bucket("clab59bucket")
+    bucket = storage_client.bucket(BUCKET_ID)
     blob = bucket.blob(destination_blob_name)
 
     result = blob.upload_from_string(upload_string)
@@ -100,7 +104,7 @@ def stop_instances(instances_list):
         # Initialize request argument(s)
         request = compute_v1.StopInstanceRequest(
             instance=instance["name"],
-            project="c-gcp-project",
+            project=PROJECT_ID,
             zone=instance["zone"],
         )
 
