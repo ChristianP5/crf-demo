@@ -3,13 +3,13 @@ from google.cloud import compute_v1
 from google.cloud import storage
 from datetime import datetime
 
+# Constants
+PROJECT_ID = "bsi-mlpt-training"
+BUCKET_ID = "clab59bucket"
 
 @functions_framework.http
 def start_vm_function(request):
 
-    # Constants
-    PROJECT_ID = "bsi-mlpt-training"
-    BUCKET_ID = "clab59bucket"
 
     # Get a List VM Instances
     instances_list = list_instances()
