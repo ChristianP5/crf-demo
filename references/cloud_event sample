@@ -1,0 +1,31 @@
+"
+{'attributes':{
+    'specversion': '1.0',
+    'id': '19833640687641929',
+    'source': '//storage.googleapis.com/projects/_/buckets/c-lab59-trigger-bucket',
+    'type': 'google.cloud.storage.object.v1.finalized',
+    'datacontenttype': 'application/json',
+    'subject': 'objects/Screenshot_2026-07-06_02-36-40.png',
+    'time': '2026-07-08T14:56:45.564831Z',
+    'bucket': 'c-lab59-trigger-bucket'
+},
+'data': {
+    'kind': 'storage#object',
+    'id': 'c-lab59-trigger-bucket/Screenshot_2026-07-06_02-36-40.png/1783522605561504',
+    'selfLink': 'https://www.googleapis.com/storage/v1/b/c-lab59-trigger-bucket/o/Screenshot_2026-07-06_02-36-40.png',
+    'name': 'Screenshot_2026-07-06_02-36-40.png',
+    'bucket': 'c-lab59-trigger-bucket',
+    'generation': '1783522605561504',
+    'metageneration': '1',
+    'contentType': 'image/png',
+    'timeCreated': '2026-07-08T14:56:45.564Z',
+    'updated': '2026-07-08T14:56:45.564Z',
+    'storageClass': 'STANDARD',
+    'timeStorageClassUpdated': '2026-07-08T14:56:45.564Z',
+    'size': '166662',
+    'md5Hash': 'bz0Vepr9z3TRGViJK+1zbw==',
+    'mediaLink': 'https://storage.googleapis.com/download/storage/v1/b/c-lab59-trigger-bucket/o/Screenshot_2026-07-06_02-36-40.png?generation=1783522605561504&alt=media',
+    'crc32c': 'zQA1Bw==',
+    'etag': 'CKDt6bqrw5UDEAE='
+    }
+}"
