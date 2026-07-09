@@ -1,0 +1,65 @@
+{
+  "incident": {
+    "condition": {
+      "conditionThreshold": {
+        "aggregations": [
+          {
+            "alignmentPeriod": "180s",
+            "perSeriesAligner": "ALIGN_MAX"
+          }
+        ],
+        "comparison": "COMPARISON_GT",
+        "duration": "0s",
+        "filter": "resource.type = \"gce_instance\" AND metric.type = \"compute.googleapis.com/instance/cpu/reserved_cores\" AND metric.labels.instance_name = monitoring.regex.full_match(\".*lab59.*\")",
+        "thresholdValue": 1,
+        "trigger": {
+          "count": 1
+        }
+      },
+      "displayName": "LAB59 VM Instance - Reserved vCPUs",
+      "name": "projects/c-gcp-project/alertPolicies/16823364261091339623/conditions/16823364261091339078"
+    },
+    "condition_name": "LAB59 VM Instance - Reserved vCPUs",
+    "documentation": {
+      "content": "",
+      "mime_type": "",
+      "subject": "[ALERT - No severity] This is a Notification that a VM has been provisioned with both more than 2 vCPU and more than 2 GB of RAM"
+    },
+    "ended_at": null,
+    "incident_id": "0.oa1ncxmiom4z",
+    "metadata": {
+      "system_labels": {},
+      "user_labels": {}
+    },
+    "metric": {
+      "displayName": "Reserved vCPUs",
+      "labels": {
+        "instance_name": "c-lab59-vm3"
+      },
+      "type": "compute.googleapis.com/instance/cpu/reserved_cores"
+    },
+    "observed_value": "2.000",
+    "policy_name": "c-lab59-alertingpolicy1",
+    "resource": {
+      "labels": {
+        "instance_id": "1811087523055826335",
+        "project_id": "c-gcp-project",
+        "zone": "asia-southeast2-a"
+      },
+      "type": "gce_instance"
+    },
+    "resource_display_name": "c-lab59-vm3",
+    "resource_id": "",
+    "resource_name": "c-gcp-project c-lab59-vm3",
+    "resource_type_display_name": "VM Instance",
+    "scoping_project_id": "c-gcp-project",
+    "scoping_project_number": 568267632484,
+    "severity": "No severity",
+    "started_at": 1783615293,
+    "state": "open",
+    "summary": "Reserved vCPUs for c-gcp-project c-lab59-vm3 with metric labels {instance_name=c-lab59-vm3} is above the threshold of 1.000 with a value of 2.000.",
+    "threshold_value": "1",
+    "url": "https://console.cloud.google.com/monitoring/alerting/alerts/0.oa1ncxmiom4z?channelType=cloud-pubsub&project=c-gcp-project"
+  },
+  "version": "1.2"
+}
